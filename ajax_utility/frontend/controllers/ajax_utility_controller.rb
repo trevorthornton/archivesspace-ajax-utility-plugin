@@ -5,7 +5,18 @@ class AjaxUtilityController < ApplicationController
 
   def get_json
     @uri = params[:uri]
-    @response = JSONModel::HTTP::get_json("/#{@uri}")
+    @query_params = {}
+    params.each do |k,v|
+      if ![:controller, :action, :uri].include?(k)
+        if v.kind_of? Array
+          # Fix arrays (esp 'resolve') to work correctly
+          @query_params["#{k.to_s}[]"] = v
+        else
+          @query_params[k.to_s] = v
+        end
+      end
+    end
+    @response = JSONModel::HTTP::get_json("/#{@uri}",@query_params)
     render json: @response, layout: false
   end
 
