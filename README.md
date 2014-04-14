@@ -1,10 +1,10 @@
 ## ArchivesSpace AJAX utility Plugin
 
-A simple plugin for ArchivesSpace to facilitate interaction with the backend via AJAX request initiated in Javascript. Requests are passed to a controller which validates permissions and interacts with the backend using the JSONModel::HTTP module, so user credentials and session tokens do not need to be handled in Javascript.
+A simple ArchivesSpace plugin to facilitate interaction with the backend via AJAX requests initiated in Javascript. Requests are passed to a controller that validates permissions and interacts with the backend using the JSONModel::HTTP module, so user credentials and session tokens do not need to be handled in Javascript.
 
 ## Installation
 
-1. Copy the 'ajax_utility' directory to the 'plugins' diectory in ArchivesSapce
+1. Copy the 'ajax_utility' directory to the 'plugins' diectory in ArchivesSpace
 2. Add the plugin to the list of plugin to load in `config/config.rb':
 ```
 AppConfig[:plugins] = ['ajax_utility', (other plugins that will use ajax_utility)]
