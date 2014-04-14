@@ -1,4 +1,4 @@
-## ArchivesSpace AJAX utility Plugin
+## ArchivesSpace AJAX Utility Plugin
 
 A simple ArchivesSpace plugin to facilitate interaction with the backend via AJAX requests initiated in Javascript. Requests are passed to a controller that validates permissions and interacts with the backend using the JSONModel::HTTP module, so user credentials and session tokens do not need to be handled in Javascript.
 
