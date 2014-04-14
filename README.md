@@ -43,3 +43,7 @@ URIs are formulated the same way as they are for GET. JSON data to be passed to 
 var postData = { title: "This is a new title" }
 $.post( "/api/repositories/1/resources/123", { json: postData } );
 ```
+
+## More info
+
+[ArchivesSpace REST API documentation](http://archivesspace.github.io/archivesspace/doc/file.API.html)
