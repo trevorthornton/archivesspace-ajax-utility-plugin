@@ -4,7 +4,7 @@ A simple ArchivesSpace plugin to facilitate interaction with the backend via AJA
 
 ## Installation
 
-1. Copy the 'ajax_utility' directory to the 'plugins' diectory in ArchivesSpace
+1. Copy the 'ajax_utility' directory to the 'plugins' directory in ArchivesSpace
 2. Add the plugin to the list of plugin to load in `config/config.rb':
 ```
 AppConfig[:plugins] = ['ajax_utility', (other plugins that will use ajax_utility)]
