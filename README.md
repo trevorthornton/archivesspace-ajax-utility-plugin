@@ -16,7 +16,7 @@ The plugin provides 2 routes that can be used to GET and POST JSON data.
 
 ### GET
 
-Just add `/api` to the beginning of backend REST endpoint URI. For example:
+Just add `/api` to the beginning of the backend REST endpoint URI. For example:
 
 ```
 /repositories/1/resources/123
@@ -40,6 +40,6 @@ URIs are formulated the same way as they are for GET. JSON data to be passed to 
 
 
 ```
-var post_data = { title: "This is a new title" }
-$.post( "/api/repositories/1/resources/123", { json: post_data } );
+var postData = { title: "This is a new title" }
+$.post( "/api/repositories/1/resources/123", { json: postData } );
 ```
