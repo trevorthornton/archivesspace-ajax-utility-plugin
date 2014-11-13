@@ -1,6 +1,6 @@
 class AjaxUtilityController < ApplicationController
 
-  set_access_control  "view_repository" => [:get_json],
+  set_access_control  "view_repository" => [:get_json, :get_resource],
                       "update_archival_record" => [:post]
 
   def get_json
@@ -25,6 +25,14 @@ class AjaxUtilityController < ApplicationController
     @json = params[:json] || '{}'
     JSONModel::HTTP::post_json(@uri, @json)
     render json: @response, layout: false
+  end
+
+
+  def get_resource
+    if params[:resource_id]
+      @resource = JSONModel(:resource).find(params[:resource_id])
+      render json: JSON.generate(@resource)
+    end
   end
 
 end
